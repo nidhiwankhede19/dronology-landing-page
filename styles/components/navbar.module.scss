@@ -1,0 +1,58 @@
+@import "@/styles/_variables.scss";
+
+.navbar {
+  color: black;
+  font-family: $font-main;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  position: fixed;
+  background: transparent;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+
+  &.scrolled {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+
+    .navbarBrand {
+      .mainLogo {
+        color: white !important;
+      }
+    }
+
+    .navbarLinks {
+      li {
+        .navLink {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  .navbarBrand {
+    font-size: 1.5rem;
+    .mainLogo {
+      text-decoration: none;
+    }
+  }
+
+  .navbarLinks {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+
+    li {
+      .navLink {
+        font-size: 1rem;
+      }
+    }
+  }
+}

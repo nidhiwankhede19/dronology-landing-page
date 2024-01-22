@@ -1,0 +1,62 @@
+@import "@/styles/_variables.scss";
+
+.main {
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-height: 650px;
+  max-width: 400px;
+  border-radius: 10px;
+  background: white;
+  padding: 15px;
+  font-family: $font-main;
+  justify-content: space-between;
+
+  .imageDiv {
+    position: relative;
+    height: 250px;
+
+    img {
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .tagAndDate {
+    display: flex;
+    justify-content: space-between !important;
+    color: gray;
+  }
+
+  .blogInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 175%;
+    }
+
+    p {
+      font-weight: 300;
+      line-height: 200%;
+      font-size: 17.5px;
+    }
+  }
+  button {
+    display: flex;
+    align-items: center;
+    width: 120px;
+    border: none;
+    font-size: 20px;
+    background: none;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    color: $dark-blue;
+  }
+}

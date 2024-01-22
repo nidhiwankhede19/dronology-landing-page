@@ -1,0 +1,139 @@
+@import "@/styles/_variables.scss";
+
+.main {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 100px;
+  // border: 2px solid red;;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .heading {
+    font-family: $font-main;
+    width: 100%;
+    padding: 0 75px;
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .blog_field {
+    width: 100%;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card {
+      font-family: $font-main;
+      border-radius: 15px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      width: 25rem;
+      height: 25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 22px;
+      margin: 8px 2px;
+
+      .blog_img {
+        border-radius: 15px;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100px;
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .info {
+          display: flex;
+          justify-content: space-between;
+
+          .link {
+            text-decoration: none;
+            font-weight: 600;
+            color: $dark-blue;
+          }
+          p{
+            color: $grey;
+          }
+        }
+      }
+
+      // .author {
+      //   display: flex;
+      //   justify-content: space-between;
+      //   align-items: center;
+      //   width: 100%;
+
+      //   .author_profile {
+      //     display: flex;
+      //     justify-content: center;
+      //     align-items: center;
+      //     gap: 12px;
+
+      //     .author_profile_image {
+      //       border-radius: 100px;
+      //     }
+      //   }
+      // }
+    }
+  }
+
+  .button {
+    width: 10rem;
+    height: 3rem;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .main{
+    padding: 50px 40px;
+    .heading{
+      font-size: 25px;
+      padding: 0;
+    }
+
+    .blog_field{
+      padding: 20px 40px;
+      // border: 2px solid blue;
+    }
+    .card{
+      max-height: 22rem;
+      max-width: 22rem;
+      padding: 0px;
+
+      .blog_img{
+        height:180px;
+        width: 280px;
+      }
+
+    }
+
+  }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 991px){
+  .main{
+    padding: 80px;
+    .heading{
+      text-align: center;
+    }
+  }
+}
